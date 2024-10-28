@@ -1,9 +1,9 @@
 cmake_minimum_required(VERSION 3.11)
 
 
-set(project "sayprogr")
+set(project "eigenTest")
 
-add_executable(${project} sayprogr.cpp)
+add_executable(${project} eigenTest.cpp)
 
 target_include_directories
 (
