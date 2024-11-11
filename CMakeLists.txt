@@ -1,21 +1,22 @@
-
-cmake_minimum_required(VERSION 3.5.0)
-project(firstCM VERSION 0.1.0)
+cmake_minimum_required(VERSION 3.11)
 
 
-set(CMAKE_CXX_STANDARD 17)
-set(CMAKE_CXX_EXTENSIONS OFF)
-set(CMAKE_CXX_STANDARD_REQUIRED TRUE)
+set(project "main")
 
-add_executable(firstCM main.cpp)
+add_executable(${project} main.cpp)
+
+# target_include_directories(
+#     ${project} PRIVATE 
+#       "${CMAKE_CURRENT_SOURCE_DIR}/deps/eigen"
+#   )
 
 
-add_subdirectory(SomeFunctions)
+# target_include_directories(
+#       ${project} PUBLIC
+#       "${PROJECT_SOURCE_DIR}/deps/eigen"
+#   )
 
-######## Build tests ########
-
-add_subdirectory(googletest)
-
-enable_testing()
-add_subdirectory(Tests)
-
+target_include_directories(
+    ${project} PRIVATE 
+      "${PROJECT_SOURCE_DIR}/deps/eigen"
+  )

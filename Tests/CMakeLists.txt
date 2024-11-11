@@ -21,11 +21,17 @@ macro(add_google_test name)
     ${TEST_NAME} PRIVATE 
       "${CMAKE_CURRENT_SOURCE_DIR}/../"
   )
+
+  target_include_directories(
+    ${TEST_NAME} PRIVATE 
+      "${CMAKE_SOURCE_DIR}/SomeFunctions"
+  )
   
   target_include_directories(
     ${TEST_NAME} PRIVATE 
-      "${CMAKE_CURRENT_SOURCE_DIR}/../eigen"
+      "${CMAKE_SOURCE_DIR}/deps/eigen"
   )
+
   target_link_libraries(
     ${TEST_NAME} PRIVATE
       gtest_main

@@ -2,3 +2,5 @@ build-vscode
 build
 .vscode
 .vscode/settings.json
+
+deps
