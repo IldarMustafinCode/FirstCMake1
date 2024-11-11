@@ -9,4 +9,13 @@ set(CMAKE_CXX_STANDARD_REQUIRED TRUE)
 
 add_executable(firstCM main.cpp)
 
+add_subdirectory(SaySomething)
+
+
+######## Build tests ########
+
+add_subdirectory(googletest)
+
+enable_testing()
+add_subdirectory(Tests)
 

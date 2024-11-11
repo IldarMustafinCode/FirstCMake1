@@ -11,10 +11,10 @@ int mainSayProgr()
     std::cin >> something;
     std::cout << "your word: " << something << std::endl;
 
-    // сумма элементов массива
-    Eigen::VectorXi v = Eigen::VectorXi::Random(10);
-    for (auto x : v)
-        std::cout << x << " ";
-    std::cout << "\n";
+    // // сумма элементов массива
+    // Eigen::VectorXi v = Eigen::VectorXi::Random(10);
+    // for (auto x : v)
+    //     std::cout << x << " ";
+    // std::cout << "\n";
     
 }
