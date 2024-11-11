@@ -14,8 +14,22 @@ add_subdirectory(SomeFunctions)
 
 ######## Build tests ########
 
-add_subdirectory(googletest)
+
 
 enable_testing()
 add_subdirectory(Tests)
 
+
+# add_subdirectory(deps/googletest)
+# add_subdirectory(deps/eigen)
+
+
+target_include_directories(
+    ${PROJECT_NAME} PRIVATE 
+      "${CMAKE_SOURCE_DIR}/deps/eigen"
+  )
+
+target_include_directories(
+    ${PROJECT_NAME} PRIVATE 
+      "${CMAKE_SOURCE_DIR}/deps/googletest"
+  )
