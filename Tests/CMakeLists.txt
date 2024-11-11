@@ -17,25 +17,32 @@ macro(add_google_test name)
       ${TEST_EXECUTABLE}.cpp
   )
 
-  target_include_directories(
-    ${TEST_NAME} PRIVATE 
-      "${CMAKE_CURRENT_SOURCE_DIR}/../"
-  )
 
   target_include_directories(
     ${TEST_NAME} PRIVATE 
       "${CMAKE_SOURCE_DIR}/SomeFunctions"
   )
-  
+
   target_include_directories(
     ${TEST_NAME} PRIVATE 
       "${CMAKE_SOURCE_DIR}/deps/eigen"
   )
 
+  target_include_directories(
+    ${TEST_NAME} PRIVATE 
+      "${CMAKE_SOURCE_DIR}/deps/googletest"
+  )
+
+  target_include_directories(
+    ${TEST_NAME} PRIVATE 
+      "${CMAKE_SOURCE_DIR}/deps/../"
+  )
+ 
   target_link_libraries(
     ${TEST_NAME} PRIVATE
-      gtest_main
+       gtest_main
   ) 
+
 
   # compiler-specific options
   if(MSVC AND MSVC_VERSION GREATER 1400)
