@@ -18,5 +18,5 @@ add_executable(${project} main.cpp)
 
 target_include_directories(
     ${project} PRIVATE 
-      "${PROJECT_SOURCE_DIR}/deps/eigen"
+      "${PROJECT_SOURCE_DIR}/eigen"
   )
